@@ -1,0 +1,142 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Main container */
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* FAQ list */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* FAQ item */
+.faq-item {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Question button */
+.faq-question {
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1f2937;
+    cursor: pointer;
+}
+
+/* Active question */
+.faq-question.active {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+/* Plus icon */
+.icon {
+    font-size: 25px;
+    font-weight: 400;
+    color: #2563eb;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate icon when active */
+.faq-question.active .icon {
+    transform: rotate(45deg);
+}
+
+/* Answer */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #ffffff;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Open answer */
+.faq-answer.open {
+    max-height: 200px;
+}
+
+/* Answer text */
+.faq-answer p {
+    padding: 0 20px 20px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .faq-question {
+        padding: 16px;
+        font-size: 15px;
+    }
+
+    .faq-answer p {
+        padding: 0 16px 16px;
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+}
